@@ -62,8 +62,8 @@ def api_endpoint():
     if control_method == 'scribble':
         # (det, input_image, prompt, a_prompt, n_prompt, num_samples, image_resolution, detect_resolution, ddim_steps,
         #  guess_mode, strength, scale, seed, eta)
-        result = scribble2image.process(det, input_image, prompt, a_prompt, n_prompt, num_samples, image_resolution,
-                                detect_resolution, ddim_steps, guess_mode, strength, scale, seed, eta)
+        result = scribble2image.process(input_image, prompt, a_prompt, n_prompt, num_samples, image_resolution,
+                                ddim_steps, guess_mode, strength, scale, seed, eta)
 
     # elif control_method == 'pose':
     #     result = pose2image.process(input_image, prompt, a_prompt, n_prompt, num_samples, image_resolution,
