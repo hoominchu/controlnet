@@ -86,5 +86,10 @@ def api_endpoint():
     return response_json, 200
 
 
+@app.route('/api/status', methods=['GET'])
+def api_status():
+    response_json = jsonify({'running': True})
+    return response_json, 200
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
