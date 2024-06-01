@@ -16,7 +16,7 @@ from flask_cors import CORS
 from waitress import serve
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3001", "https://app.fantail.pro"])
 
 
 # a_prompt = 'best quality, extremely detailed'
@@ -93,5 +93,5 @@ def api_status():
     return response_json, 200
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
-    # serve(app, host='0.0.0.0', port=5000)
+    # app.run(host='0.0.0.0', port=5000)
+    serve(app, host='0.0.0.0', port=5000)
